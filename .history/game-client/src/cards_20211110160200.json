@@ -1,0 +1,31 @@
+{
+    "cards":[
+        {
+            "name":"Ciri",
+            "folderName":"ciri",
+            "Power": "4",
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default",
+            "position": ["infantry"]
+        },
+        {
+            "name":"Avallach",
+            "folderName":"avallach",
+            "Power": "2",
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default"
+        },
+        {
+            "name":"Iris",
+            "folderName":"iris",
+            "Power": "2",
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default"
+        }
+        
+    ]
+    
+}

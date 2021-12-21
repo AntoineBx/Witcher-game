@@ -1,0 +1,54 @@
+<template>
+  <div class="popup" v-show="open" @click="close">
+    <div class="inner-popup">
+       <Card  :cardName="this.cardName" :unmovable="true" />
+
+    </div>
+  </div>
+</template>
+
+<script>
+import CardsList from "@/cards.json";
+import Card from "@/components/Board/Card.vue";
+import { CLOSE_POPUP } from "@/store/modules/popupCard/mutations";
+import { mapState, mapMutations } from 'vuex'
+
+export default {
+  components: { Card },
+  computed: {
+    ...mapState('popupCard',{
+        open: state => state.open,
+        cardName: state => state.cardName,
+    })
+  },
+  methods: {
+    ...mapMutations('popupCard',[
+        CLOSE_POPUP
+    ]),
+    close : function(){
+      this[CLOSE_POPUP]();
+    }
+  }
+
+}
+</script>
+
+<style lang="scss">
+
+  .popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000003b;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inner-popup{
+
+    }
+  }
+</style>

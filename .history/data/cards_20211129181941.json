@@ -1,0 +1,32 @@
+{
+    "cards":{
+        "ciri":{
+            "name":"Ciri",
+            "folderName":"ciri",
+            "power": "4",
+            "rarity": "3",
+            "positioning": ["infantry"],
+            "abilities" :  []
+        },
+        "avallach": {
+            "name":"Avalla'ch",
+            "folderName":"avallach",
+            "power": "12",
+            "positioning": ["infantry","ranged"],
+            "abilities" :  ["spy"]
+        },
+        "iris" : {
+            "name":"Iris",
+            "folderName":"iris",
+            "power": "2",
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default",
+            "positioning": ["ranged"],
+            "description" : "description",
+            "abilities" :  []
+        }
+        
+    }
+    
+}

@@ -1,0 +1,21 @@
+{
+  "name": "tictacmul",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "devClient": "cd game-client && npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "socket.io": "^3.0.3",
+    "update": "^0.7.4",
+    "uuid": "^3.3.2",
+    "vue-socket.io-extended": "^5.0.0-alpha.5"
+  }
+}

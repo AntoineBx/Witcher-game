@@ -1,0 +1,61 @@
+<template>
+  <div class="card-placeholder" ref="currentPlaceholder"></div>
+</template>
+
+<script>
+import { ADD_CARD_STATUS, UPDATE_CARD_STATE_COORD } from '@/store/modules/board/mutations';
+import { mapState,mapMutations } from 'vuex'
+export default {
+
+    
+    data: function (){
+      return{
+      }
+    },
+    props : {
+        idCard: "",
+        syncPlaceholders:0
+    },
+    watch: {
+        syncPlaceholders: function() {
+           setTimeout(() => {
+                let ref = this.$refs.currentPlaceholder
+                this.setCardCoord()
+           }, 100);
+        }
+    },
+    methods: {
+        ...mapMutations('board',[
+            UPDATE_CARD_STATE_COORD,
+            ADD_CARD_STATUS
+        ]),
+        debounce : function (func){
+            var timer;
+            return function(event){
+                if(timer) clearTimeout(timer);
+                timer = setTimeout(func,200,event);
+            };
+        },
+        setCardCoord(){
+            let ref = this.$refs.currentPlaceholder
+            console.log("props card placeholder : ", this.idCard);
+            if(this.idCard == "" || this.idCard == undefined){ 
+                console.error("placeholder IdCard undefined ! "); 
+                return;
+            }
+            this[UPDATE_CARD_STATE_COORD]({idCard : this.idCard, coord: { x: ref.getBoundingClientRect().left, y: ref.getBoundingClientRect().top}})
+        }
+    },
+    mounted :function(){
+        this.setCardCoord()
+         
+        window.addEventListener("resize", this.debounce(()=>{
+            this.setCardCoord()
+        }))
+    },
+}
+</script>
+
+<style>
+
+</style>

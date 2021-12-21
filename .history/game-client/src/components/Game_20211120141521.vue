@@ -1,0 +1,65 @@
+<template>
+  <div class="game">
+    <label value="Name">Nom de l'invité </label>
+    <input ref="nameInput" type="text" v-model="playerName" @keyup.enter="validateWaitingList" >
+    <button @click="validateWaitingList">Find game</button>
+    {{ totalPlayers }}
+    <Board hidden/>
+  </div>
+</template>
+
+<script>
+import Board from "@/components/Board/Board.vue";
+import { mapActions, mapState, mapMutations} from 'vuex'
+
+export default {
+    components:{
+        Board
+    },
+    data() {
+        return {
+            playerName: "",
+            totalPlayers : 0,
+        };
+    },
+    sockets: {
+        connect() {
+            console.log('socket connected')
+        },
+        customEmit(val) {
+        console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)')
+        }
+    },
+    methods: {
+        validateWaitingList() {
+            if (this.playerName != "") {
+                this.$socket.client.emit("joinGame", {
+                    username: this.playerName,
+                    img: "balec",
+                    maxPlayers: 2
+                });
+            }
+        }
+    },
+    created : function(){
+        this.$socket.$subscribe('connect', payload => {
+            console.log(payload)
+        });
+        // this.$socket.on("connect",()=>{
+        //     console.log(" connect")
+            
+        // })
+    //   this.$socket.on("totalPlayers", (data) => {
+    //             this.totalPlayers = data
+    //             console.log("total PLayer")
+    //         });
+        
+         
+    },
+
+}
+</script>
+
+<style>
+
+</style>

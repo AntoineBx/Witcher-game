@@ -1,0 +1,27 @@
+{
+    "cards":[
+        {
+            "name":"Ciri",
+            "folderName":"ciri",
+            "Power": "4",
+            "rarity": "3",
+            "border":"gold"
+        },
+        {
+            "name":"Avallach",
+            "folderName":"avallach",
+            "Power": "2",
+            "rarity": "3",
+            "border":"gold"
+        },
+        {
+            "name":"Iris",
+            "folderName":"iris",
+            "Power": "2",
+            "rarity": "3",
+            "border":"gold"
+        }
+        
+    ]
+    
+}

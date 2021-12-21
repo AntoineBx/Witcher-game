@@ -1,0 +1,254 @@
+.placeholder{
+    user-select: none;
+    pointer-events: none;
+    width: 122.5px;
+    height: 175px;
+    position: relative;
+    
+    .card-container{
+        width: 122.5px;
+        height: 175px;
+        pointer-events: all;
+        transition: transform 0.3s;
+        transform-style: preserve-3d;
+        perspective: 600px;
+        .card{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            justify-content: center;
+            transform-style : preserve-3d;
+            perspective: 1000px;
+            transition: all 0.4s;
+            will-change: transform;
+            img.backCard,
+            img.backupImg{
+                position: absolute;
+                top: 50%;
+                bottom: 0;
+                left: 50%;
+                width: 96.8%;
+                transform: translate(-50%,-50%);
+                z-index: -1;
+            }
+            img.backCard{
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%,-50%) translateZ(-0.5px);
+            }
+            .video{
+                pointer-events: none;
+                position: absolute;
+                top: 50%;
+                bottom: 0;
+                left: 50%;
+                width: 96.8%;
+                height: 99%;
+                transform: translate(-50%,-50%);
+                video{
+                    width: 100%;
+                    height: 100%;
+                    transform-origin: top left;
+                    opacity:0;
+                    transition: opacity 0.9s;
+                    &.visible{
+                        opacity: 1;
+                    }
+                }
+            }
+            .border{
+                position: absolute;
+                top:0;
+                width: 100%;
+                height: 100%;
+                img{
+                    
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .glare{
+                pointer-events: none;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 98.3%;
+                height: 99%;
+                border-radius:5px;
+                .glare-inner{
+                    position: absolute;
+                    pointer-events: none;
+                    top: 50%;
+                    left: 50%;
+                    width: 200%;
+                    height: 140%;
+                    opacity: 0;
+                    transition: transform 0.02s, opacity 0.8s;
+                    pointer-events: none;
+                    will-change: transform,opacity;
+                    transform:translate(-50%, -50%);
+                    background-image:linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+                }
+            }
+            .top-left{
+                pointer-events: none;
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 28%;
+                transition: transform 0.4s, width 0.2s;
+                transform: translateZ(0px);
+                transform-style: preserve-3d;
+                .banner{
+                    img.power{
+                        position: absolute;
+                        margin: 0;
+                        width: 65%;
+                        top: 46%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                .rarity{
+                    transition: transform 0.2s 0.1s;
+                    position: absolute;
+                    top: 14%;
+                    left: 14.5%;
+                    width: 20%;
+                    height: 20%;
+                    transform: translateZ(0px);
+                    img{
+                        display: block;
+                    }
+                }
+            }
+            .abilitie{
+                position: absolute;
+                left: 6px;
+                bottom: 9px;
+                transition: 0.2s width,0.3s transform;
+                width: 30px;
+                filter:drop-shadow(2px 4px 4px #000);
+            }
+        }
+        
+    }
+    &.hidden{
+        .card-container{
+            .card{
+                transform: rotateY(180deg)!important;
+            }
+        }
+    }
+    &.hovered{
+        z-index:99!important;
+        .card-container{
+            .card{
+                width: 150%;
+                height: 150%;
+                top:-50%;
+                left: -25%;
+                .glare .glare-inner{
+                    transition : opacity 0.8s;
+                }
+                .top-left{
+                    transform :translateZ(20px);
+                    .rarity{
+                        transform :translateZ(2px);
+                    }
+                }
+            }
+            .abilitie{
+                transform :translateZ(10px);
+                width: 40px;
+            }
+
+        }
+    }
+    &.onField{
+        .card-container{
+            pointer-events: none;
+            .card{
+                pointer-events: all;
+                width: 73%;
+                height: 73%;
+                top:0%;
+                left: 0%;
+                .top-left{
+                    width: 40%;
+                }
+            }
+            
+        }
+        &.hovered{
+            .card-container{
+                .card{
+                    width: 100%;
+                    height: 100%;
+                    top:-12%;
+                    left: -12%;
+                    .top-left{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+    &.showcase{
+        .card-container{
+            pointer-events: none;
+            .card{
+                pointer-events: all;
+                width: 160%;
+                height: 160%;
+                top:0%;
+                left: 0%;
+                .top-left{
+                    width: 40%;
+                }
+                .abilitie{
+                    width: 50px;
+                }
+            }
+        }
+        &.hovered{
+            .card-container{
+                .card{
+                    width: 160%;
+                    height: 160%;
+                    top:0%;
+                    left: 0%;
+                    .top-left{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+    &.isHolding{
+        .card-container{   
+            .card{
+                top:10%;
+                left: 10%;
+                width: 80%;
+                height: 80%;
+            }
+            .abilitie{
+                width: 30px;
+            }
+        }
+        .net{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate3d(-50%,-50%,-1px);
+            width: 10000px;
+            height: 10000px;
+        }
+    }
+}

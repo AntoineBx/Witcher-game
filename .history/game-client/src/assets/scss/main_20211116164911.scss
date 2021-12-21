@@ -1,0 +1,11 @@
+
+@font-face {
+    font-family: 'GWENT';
+    src: url('../misc/font/hinted-GWENT-ExtraBold.ttf')  format('truetype'), 
+}
+body{
+    font-family: 'GWENT';
+    // background-color: black;
+    margin: 0;
+    overflow: hidden;
+}
