@@ -1,0 +1,31 @@
+<template>
+<div class="score">
+     
+</div>
+</template>
+
+<script>
+export default {
+
+
+
+    watch: {
+        '$store.state.board.scores': {
+            deep:true,
+            handler(state){
+            if(this.$store.state.board.player == 1){
+                this.username1 =  state[2];
+                this.username2 =  state[1];
+            }else{
+                this.username1 =  state[1];
+                this.username2 =  state[2];
+            }
+            }
+        },
+  }
+}
+</script>
+
+<style>
+
+</style>

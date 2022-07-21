@@ -1,0 +1,41 @@
+
+@import "@/assets/scss/font.scss";  
+
+
+:root {
+    --cardHeight: 175px;
+    --cardWidth: 122.5px;
+}
+
+body{
+    font-family: 'HalisGR';
+    // background-color: black;
+    margin: 0;
+    overflow: hidden;
+    color: #000000;
+    background-color: rgb(63, 54, 50);
+}
+.gold-frame{
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        border-width: 12px;
+        border-style: solid;
+        border-image-source: url(../img/frame.png);
+        border-image-slice: 12;
+        border-image-outset: 0;
+        border-image-repeat: round;
+        pointer-events: none;
+    }
+}
+h1,h2,h3{
+    font-family: 'GWENT';
+    margin: 0 0 10px;
+    color: #c8c8c8;
+}

@@ -1,0 +1,97 @@
+
+{
+    "cards":{
+        "avallach": {
+            "name":"Avalla'ch",
+            "folderName":"avallach",
+            "power": 0,
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default",
+            "positioning": ["infantry","ranged"],
+            "description" : "Amongst the free elves were a handful of Aen Saevherne, or Sages. They were an enigma, bordering on a legend.",
+            "abilities" :  {
+                "spy" : true
+            }
+        },
+        "ciri":{
+            "name":"Ciri",
+            "folderName":"ciri",
+            "power": 4,
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default",
+            "positioning": ["infantry"],
+            "description" : "I go wherever I please, whenever I please.",
+            "abilities" :  []
+        },
+        "iris" : {
+            "name":"Iris",
+            "folderName":"iris",
+            "power": 2,
+            "rarity": "3",
+            "border":"gold",
+            "banner" : "default",
+            "positioning": ["ranged"],
+            "description" : "I remember so little… Yet when I think of my rose, I begin to recall what was.",
+            "abilities" :  {}
+        },
+        "bittingFrost" : {
+            "name":"Bitting Frost",
+            "folderName":"bittingFrost",
+            "power": -1,
+            "rarity": "1",
+            "border":"bronze",
+            "banner" : "default",
+            "positioning": ["infantry"],
+            "description" : "description",
+            "abilities" :  {
+                "weather" : "infantry",
+                "discards" : true
+            }
+        },
+        "dijkstra" : {
+            "name":"Dijkstra",
+            "folderName":"dijkstra",
+            "power": 4,
+            "rarity": "1",
+            "border":"bronze",
+            "banner" : "default",
+            "positioning": ["infantry"],
+            "description" : "You sure he don't look the least bit familar...?",
+            "abilities" :  {
+                "spy" : true
+            }
+        },
+        "poorFuckingInfantry" : {
+            "name":"Poor Fucking Infantry",
+            "folderName":"poorFuckingInfantry",
+            "power": 1,
+            "rarity": "1",
+            "border":"bronze",
+            "banner" : "default",
+            "positioning": ["infantry"],
+            "description" : "I's a war veteran! Spare me a crown?",
+            "abilities" :  {
+                "bond" : 0
+            }
+        },
+        "scorch" : {
+            "name":"Scorch",
+            "folderName":"scorch",
+            "power": -1,
+            "rarity": "1",
+            "border":"bronze",
+            "banner" : "default",
+            "positioning": ["infantry","ranged","siege"],
+            "description" : "Geralt took one step back. He'd seen men hit by Scorch before. Or more accurately, seen what remained of them afterwards.",
+            "abilities" :  {
+                "scorch" : 0,
+                "discards" : true
+            }
+        }
+
+        
+    }
+    
+}

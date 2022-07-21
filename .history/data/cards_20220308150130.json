@@ -1,0 +1,142 @@
+{
+    "cards": {
+        
+        "avallach": {
+            "abilities": {
+                "spy": true
+            },
+            "banner": "default",
+            "border": "gold",
+            "description": "Amongst the free elves were a handful of Aen Saevherne, or Sages. They were an enigma, bordering on a legend.",
+            "folderName": "avallach",
+            "name": "Avalla'ch",
+            "positioning": [
+                "infantry",
+                "ranged"
+            ],
+            "power": 0,
+            "rarity": "3"
+        },
+        "bitingFrost": {
+            "abilities": {
+                "discards": true,
+                "weather": "infantry"
+            },
+            "banner": "default",
+            "border": "bronze",
+            "description": "Best thing about frost? Bodies of the fallen don't rot so quickly.",
+            "folderName": "bitingFrost",
+            "name": "Biting Frost",
+            "positioning": [
+                "infantry"
+            ],
+            "power": -1,
+            "rarity": "1"
+        },
+        "clearWeather": {
+            "abilities": {
+                "discards": true,
+                "weather": "sun"
+            },
+            "banner": "default",
+            "border": "bronze",
+            "description": "description",
+            "folderName": "clearWeather",
+            "name": "Clear Weather",
+            "positioning": [
+                "infantry",
+                "ranged",
+                "siege"
+            ],
+            "power": -1,
+            "rarity": "1"
+        },
+        "ciri": {
+            "abilities": [],
+            "banner": "default",
+            "border": "gold",
+            "description": "I go wherever I please, whenever I please.",
+            "folderName": "ciri",
+            "name": "Ciri",
+            "positioning": [
+                "infantry"
+            ],
+            "power": 4,
+            "rarity": "3"
+        },
+        "dijkstra": {
+            "abilities": {
+                "spy": true
+            },
+            "banner": "default",
+            "border": "bronze",
+            "description": "You sure he don't look the least bit familar...?",
+            "folderName": "dijkstra",
+            "name": "Dijkstra",
+            "positioning": [
+                "infantry"
+            ],
+            "power": 4,
+            "rarity": "1"
+        },
+        "iris": {
+            "abilities": {},
+            "banner": "default",
+            "border": "gold",
+            "description": "I remember so little… Yet when I think of my rose, I begin to recall what was.",
+            "folderName": "iris",
+            "name": "Iris",
+            "positioning": [
+                "ranged"
+            ],
+            "power": 2,
+            "rarity": "3"
+        },
+        "poorFuckingInfantry": {
+            "abilities": {
+                "bond": 0
+            },
+            "banner": "default",
+            "border": "bronze",
+            "description": "I's a war veteran! Spare me a crown?",
+            "folderName": "poorFuckingInfantry",
+            "name": "Poor Fucking Infantry",
+            "positioning": [
+                "infantry"
+            ],
+            "power": 1,
+            "rarity": "1"
+        },
+        "scorch": {
+            "abilities": {
+                "discards": true,
+                "scorch": 0
+            },
+            "banner": "default",
+            "border": "bronze",
+            "description": "Geralt took one step back. He'd seen men hit by Scorch before. Or more accurately, seen what remained of them afterwards.",
+            "folderName": "scorch",
+            "name": "Scorch",
+            "positioning": [
+                "infantry",
+                "ranged",
+                "siege"
+            ],
+            "power": -1,
+            "rarity": "1"
+        },
+        "yarpenZigrin": {
+            "abilities": {},
+            "banner": "default",
+            "border": "bronze",
+            "description": "Ever hear o' the dragon Ocvist? From Quartz Mountain? Well, Yarpen Zigrin and his band o' dwarves did 'im in.",
+            "folderName": "yarpenZigrin",
+            "name": "Yarpen Zigrin",
+            "positioning": [
+                "infantry"
+            ],
+            "power": 2,
+            "rarity": "1"
+        }
+    }
+}
