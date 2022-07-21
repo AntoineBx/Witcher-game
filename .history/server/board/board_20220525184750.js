@@ -71,8 +71,6 @@ class Board {
     console.log("ENDROUND");
     this.emptyField()
     this.round++;
-    this.score1 = 0;
-    this.score2 = 0;
     this.passed1 = false;
     this.passed2 = false;
   }

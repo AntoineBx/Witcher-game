@@ -71,8 +71,6 @@ class Board {
     console.log("ENDROUND");
     this.emptyField()
     this.round++;
-    this.score1 = 0;
-    this.score2 = 0;
     this.passed1 = false;
     this.passed2 = false;
   }
@@ -350,8 +348,7 @@ class Board {
 
   emptyField(){
     this.fields.forEach((line,index)=>{
-      let newGrave = this.fields[index].cards.splice(0, this.fields[index].cards.length);
-      this.fields[index].frozen = false;
+      let newGrave = this.fields[index].cards.splice(0, this.fields[index].cards.length)
       if(index <= 2){
         this.graveyard2 = [...this.graveyard2, ...newGrave]
       }else{
