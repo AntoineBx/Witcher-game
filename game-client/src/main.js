@@ -35,7 +35,7 @@ const store = createStore({
         popupCard,
     }
 })
-const socketInstance = io("http://localhost:5000", {
+const socketInstance = io("http://localhost:5005", {
   transports: ['websocket'],
 });
 
