@@ -1,5 +1,5 @@
 Witcher 3 game of Gwent Adaptation : 
-
+Run 2 separate app to start playing
 
 # Run Server NodeJs with Socket Io : 
 ```bash
